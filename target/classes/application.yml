@@ -1,0 +1,19 @@
+server:
+  port : 8083
+  session:
+    timeout= 3000:
+
+kafka:
+  bootstrap-servers: localhost:9092
+
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration, org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration
+debug: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+

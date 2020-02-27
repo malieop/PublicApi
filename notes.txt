@@ -1,0 +1,8 @@
+health endpoint:
+- http://127.0.0.1:8081/actuator/health
+
+circuit breaker:
+- https://stackabuse.com/spring-cloud-hystrix/
+- http://localhost:8081/hystrix
+- metrics:
+    http://127.0.0.1:8081/hystrix/monitor?stream=http%3A%2F%2F127.0.0.1%3A8081%2Factuator%2Fhystrix.stream
